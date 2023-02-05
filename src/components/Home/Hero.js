@@ -31,7 +31,7 @@ function Features() {
           mt: "20px",
           mb: "20px",
           fontSize: "24px",
-          lineHeight: "60px",
+          lineHeight: "36px",
           color: "#fff",
         }}
       >
@@ -80,7 +80,7 @@ function Hero() {
           }}
         >
           <Typography
-            variant="h4"
+            variant="h1"
             sx={{ fontSize: "44px", lineHeight: "60px", color: "#fff" }}
           >
             <span style={{ color: "#FB9B43" }}>Get ready</span> to grow with us

@@ -25,7 +25,7 @@ function Navbar() {
   return (
     <Box
       sx={{
-        padding: "8px 40px",
+        padding: "14px 40px",
         height: "64px",
         boxSizing: "border-box",
         position: "fixed",
@@ -39,7 +39,8 @@ function Navbar() {
       <Grid container justifyContent="center">
         <Grid
           item
-          xs={10}
+          xs={12}
+          sm={10}
           sx={{
             display: "flex",
             justifyContent: "space-between",
@@ -52,7 +53,7 @@ function Navbar() {
             </IconButton>
             <Typography
               variant="subtitle2"
-              sx={{ fontSize: "16px", color: "#fff" }}
+              sx={{ fontSize: { xs: "11px", sm: "16px" }, color: "#fff" }}
             >
               Annette Black
             </Typography>
@@ -113,7 +114,7 @@ function Navbar() {
               ></Box>
               <Typography
                 variant="subtitle2"
-                sx={{ fontSize: "16px", color: "#fff" }}
+                sx={{ fontSize: { xs: "11px", sm: "16px" }, color: "#fff" }}
               >
                 login
               </Typography>

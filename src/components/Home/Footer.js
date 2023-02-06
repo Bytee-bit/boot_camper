@@ -3,45 +3,71 @@ import React from "react";
 
 function Footer() {
   return (
-    <Grid container justifyContent="center">
-      <Grid
-        item
-        xs={10}
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <Box sx={{ display: "flex", gap: "16px", alignItems: "center" }}>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontSize: "16px", color: "#fff" }}
-          >
-            Powered by
-          </Typography>
+    <Box
+      sx={{
+        padding: "8px 40px",
+        height: "64px",
+        display: "flex",
+        boxSizing: "border-box",
+        position: "sticky",
 
-          <Typography>
-            <span style={{ fontWeight: "700" }}>T</span>IME
-          </Typography>
-        </Box>
+        background: "#C1CFFF",
+      }}
+    >
+      <Grid container justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          sm={10}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              gap: { xs: "8px", sm: "16px" },
+              alignItems: "center",
+            }}
+          >
+            <Typography
+              variant="subtitle2"
+              sx={{ fontSize: { xs: "11px", sm: "16px" }, color: "#161E3C" }}
+            >
+              Powered by
+            </Typography>
 
-        <Box sx={{ display: "flex", gap: "24px", alignItems: "center" }}>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontSize: "16px", color: "#161E3C" }}
-          >
-            Privacy Policy
-          </Typography>
-          <Typography
-            variant="subtitle2"
-            sx={{ fontSize: "16px", color: "#161E3C" }}
-          >
-            Terms & Conditions
-          </Typography>
-        </Box>
+            <Typography
+              variant="subtitle2"
+              sx={{
+                fontSize: { xs: "11px", sm: "16px" },
+                fontWeight: "700",
+                color: "#fff",
+              }}
+            >
+              TIME
+            </Typography>
+          </Box>
+
+          <Box sx={{ display: "flex", gap: "24px", alignItems: "center" }}>
+            <Typography
+              variant="subtitle2"
+              sx={{ fontSize: { xs: "11px", sm: "16px" }, color: "#161E3C" }}
+            >
+              Privacy Policy
+            </Typography>
+            <Typography
+              variant="subtitle2"
+              sx={{ fontSize: { xs: "11px", sm: "16px" }, color: "#161E3C" }}
+            >
+              Terms & Conditions
+            </Typography>
+          </Box>
+        </Grid>
       </Grid>
-    </Grid>
+    </Box>
   );
 }
 

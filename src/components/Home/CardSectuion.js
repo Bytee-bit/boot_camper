@@ -21,7 +21,12 @@ function CardCompo() {
         width="280"
         image={profile}
         alt="green iguana"
-        sx={{ borderRadius: "4px" }}
+        sx={{
+          borderRadius: "4px",
+          "&": {
+            height: { sm: "180px", md: "224px", lg: "280px" },
+          },
+        }}
       />
       <CardContent sx={{ "&": { p: "0px" } }}>
         <Typography
@@ -74,18 +79,22 @@ function CardSectuion() {
     >
       <Typography
         variant="h3"
-        sx={{ fontSize: "40px", lineHeight: "60px", color: "#282828" }}
+        sx={{
+          fontSize: { xs: "24px", sm: "32px", md: "40px" },
+          lineHeight: "60px",
+          color: "#282828",
+        }}
       >
         Checkout my courses
       </Typography>
-      <Grid container justifyContent="center" gap="40px">
-        <Grid item xs={10} md={3}>
+      <Grid container justifyContent="center" gap="40px" sx={{ width: "100%" }}>
+        <Grid item xs={12} sm={3.5} md={3.5}>
           <CardCompo />
         </Grid>
-        <Grid item xs={10} md={3}>
+        <Grid item xs={12} sm={3.5} md={3.5}>
           <CardCompo />
         </Grid>
-        <Grid item xs={10} md={3}>
+        <Grid item xs={12} sm={3.5} md={3.5}>
           <CardCompo />
         </Grid>
       </Grid>

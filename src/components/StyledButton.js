@@ -40,17 +40,7 @@ const StyledBtn = styled(Button)({
 function StyledButton({ title, isIcon = false, sx, btnClick }) {
   // color;
   return (
-    <StyledBtn
-      onClick={btnClick}
-      variant="contained"
-      sx={sx}
-      //   sx={{
-      //     "&": {
-      //       border: "1px solid red",
-      //     },
-      //   }}
-      //   onClick={() => handleBtnClick(idx)}
-    >
+    <StyledBtn onClick={btnClick} variant="contained" sx={sx}>
       <Box
         sx={{
           display: "flex",
@@ -75,7 +65,6 @@ function StyledButton({ title, isIcon = false, sx, btnClick }) {
               "&:hover": {
                 transform: `translateX(100%)`,
               },
-              // width: "100%",
             }}
           />
         )}

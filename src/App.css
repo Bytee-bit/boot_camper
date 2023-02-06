@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 } */
+
+.slide {
+  transition: transform 500 ease-out;
+}
+
+/* ---------Hero section----------- */

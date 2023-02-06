@@ -1,29 +1,15 @@
-import { Button, Grid, Typography } from "@mui/material";
+import { Grid, Typography } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useState } from "react";
+import React from "react";
 import { Carousel } from "../Carousel";
 import img1 from "../../assets/img1.jpg";
 import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
-import { styled } from "@mui/material/styles";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import StyledButton from "../StyledButton";
 
-const Responsive = styled("div")(({ theme }) => ({
-  [theme.breakpoints.down("md")]: {
-    background: "red",
-  },
-}));
-
-const styles = (theme) => ({
-  Responsive: {
-    [theme.breakpoints.down("md")]: {
-      background: "red",
-    },
-  },
-});
-
 const slides = [img1, img2, img3];
+
 function Features({ title }) {
   return (
     <Box
@@ -34,14 +20,6 @@ function Features({ title }) {
         justifyContent: "center",
       }}
     >
-      {/* <Box
-        sx={{
-          width: "120px",
-          height: "120px",
-          borderRadius: "50%",
-          background: "#FB9B43",
-        }}
-      ></Box> */}
       <Box>
         <CheckCircleIcon
           sx={{
@@ -67,8 +45,6 @@ function Features({ title }) {
 }
 
 function Hero() {
-  //   const s = styles();
-
   return (
     <Box sx={{ padding: "40px", background: "#161E3C", mt: "64px" }}>
       <Grid
@@ -76,7 +52,6 @@ function Hero() {
         sx={{
           display: "flex",
           justifyContent: "center",
-          // p: "16px",
           gap: { xs: "40px" },
         }}
       >
@@ -121,9 +96,6 @@ function Hero() {
               },
               lineHeight: {
                 xs: "60px",
-                // sm: "40px",
-                // md: "34px",
-                // lg: "60px",
               },
               color: "#fff",
             }}
@@ -142,7 +114,6 @@ function Hero() {
                 md: "20px 0px",
                 lg: "20px 0px",
               },
-              //   fontSize: "24px",
               fontSize: {
                 xs: "16px",
                 sm: "24px",

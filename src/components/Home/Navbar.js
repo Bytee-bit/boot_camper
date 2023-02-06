@@ -99,13 +99,11 @@ function Navbar() {
                   left: "-8px",
                   width: "100%",
                   height: "100%",
-                  // background: "#FB9B43",
                   background: "transparent",
                   p: "4px",
                   zIndex: "10",
                   transition: "all 500ms ease-in",
                   "&:hover": {
-                    // background: "red",
                     background: "#FB9B43",
                     zIndex: "-1",
                     width: "0%",

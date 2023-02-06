@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React, { useState } from "react";
 import BootCampCard from "../BootCampCard";
 import StyledButton from "../StyledButton";
@@ -44,7 +44,6 @@ function Bootcamp({ slides }) {
       >
         Bootcamps
       </Typography>
-      {/* activeBtn */}
       <Box sx={{ display: "flex", gap: "16px" }}>
         {btns.map((btn, idx) => (
           <StyledButton

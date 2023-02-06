@@ -1,7 +1,12 @@
 import { Box } from "@mui/material";
 import { useEffect, useState } from "react";
 
-export function Carousel({ children: slides, autoSlide, duration }) {
+export function Carousel({
+  children: slides,
+  autoSlide,
+  duration,
+  indicator = true,
+}) {
   const [curr, setCurr] = useState(0);
   const prev = () =>
     setCurr((curr) => (curr === 0 ? slides.length - 1 : curr - 1));
@@ -46,7 +51,7 @@ export function Carousel({ children: slides, autoSlide, duration }) {
           sx={{
             position: "absolute",
             bottom: "-48px",
-            display: "flex",
+            display: indicator ? "flex" : "none",
             alignItems: "center",
             justifyContent: "flex-end",
             width: "100%",

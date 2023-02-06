@@ -10,6 +10,7 @@ import {
 } from "@mui/material";
 import React from "react";
 import profile from "../../assets/profile_pic.jpg";
+import StyledButton from "../StyledButton";
 
 function CardCompo() {
   return (
@@ -47,17 +48,19 @@ function CardCompo() {
       </CardContent>
 
       <CardActions sx={{ "&": { p: "0px" } }}>
-        <Button
+        <StyledButton title={"Join Now"} isIcon={true} color="#FB9B43" />
+        {/* <Button
           variant="contained"
           size="small"
           color="primary"
           fullWidth
           sx={{ color: "#161E3C" }}
-        >
-          <Typography variant="subtitle2" sx={{ color: "#fff" }}>
+        > */}
+
+        {/* <Typography variant="subtitle2" sx={{ color: "#fff" }}>
             Join Now
-          </Typography>
-        </Button>
+          </Typography> */}
+        {/* </Button> */}
       </CardActions>
       {/* </CardActionArea> */}
     </Card>
@@ -88,13 +91,13 @@ function CardSectuion() {
         Checkout my courses
       </Typography>
       <Grid container justifyContent="center" gap="40px" sx={{ width: "100%" }}>
-        <Grid item xs={12} sm={3.5} md={3.5}>
+        <Grid item xs={12} sm={3.5} md={3.5} lg={2.75}>
           <CardCompo />
         </Grid>
-        <Grid item xs={12} sm={3.5} md={3.5}>
+        <Grid item xs={12} sm={3.5} md={3.5} lg={2.75}>
           <CardCompo />
         </Grid>
-        <Grid item xs={12} sm={3.5} md={3.5}>
+        <Grid item xs={12} sm={3.5} md={3.5} lg={2.75}>
           <CardCompo />
         </Grid>
       </Grid>

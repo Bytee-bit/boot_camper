@@ -7,6 +7,7 @@ import img2 from "../../assets/img2.jpg";
 import img3 from "../../assets/img3.jpg";
 import { styled } from "@mui/material/styles";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import StyledButton from "../StyledButton";
 
 const Responsive = styled("div")(({ theme }) => ({
   [theme.breakpoints.down("md")]: {
@@ -67,11 +68,9 @@ function Features({ title }) {
 
 function Hero() {
   //   const s = styles();
-  const [w, setW] = useState(window.innerWidth);
-  console.log(w);
 
   return (
-    <Box sx={{ padding: "40px", background: "#161E3C" }}>
+    <Box sx={{ padding: "40px", background: "#161E3C", mt: "64px" }}>
       <Grid
         container
         sx={{
@@ -82,7 +81,7 @@ function Hero() {
         }}
       >
         <Grid item xs={12} sm={10} md={5} lg={4} sx={{}}>
-          <Carousel autoSlide={true} duration={300}>
+          <Carousel autoSlide={true} duration={3000}>
             {slides.map((url) => (
               <img
                 src={url}
@@ -137,10 +136,15 @@ function Hero() {
           <Typography
             variant="subtitle2"
             sx={{
-              m: { sm: "10px 0px", md: "20px 0px", lg: "20px 0px" },
+              mb: { xs: "8px" },
+              m: {
+                sm: "10px 0px",
+                md: "20px 0px",
+                lg: "20px 0px",
+              },
               //   fontSize: "24px",
               fontSize: {
-                xs: "12px",
+                xs: "16px",
                 sm: "24px",
                 md: "14px",
                 lg: "18px",
@@ -151,23 +155,27 @@ function Hero() {
           >
             Start with us today
           </Typography>
-          <Button variant="contained" sx={{ width: "fit-content" }}>
-            <Typography
-              variant="subtitle2"
-              sx={{
-                fontSize: {
-                  xs: "12px",
-                  sm: "24px",
-                  md: "12px",
-                  lg: "18px",
-                  xl: "24px",
-                },
-                // lineHeight: "36px",
-              }}
-            >
-              View all courses
-            </Typography>
-          </Button>
+          <StyledButton
+            title={" View all courses"}
+            isIcon={true}
+            sx={{
+              "&": {
+                background: "#FB9B43",
+                fontSize: "24px",
+                p: "10px 20px",
+              },
+              "&:hover": {
+                backgroundColor: "#FB9B43eb",
+                borderColor: "#FB9B43eb",
+                boxShadow: "none",
+              },
+              "&:active": {
+                boxShadow: "none",
+                backgroundColor: "#FB9B43",
+                borderColor: "#FB9B43",
+              },
+            }}
+          />
         </Grid>
       </Grid>
       <Grid

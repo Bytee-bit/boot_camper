@@ -1,6 +1,7 @@
 import { Box, Button, Typography } from "@mui/material";
 import React, { useState } from "react";
 import BootCampCard from "../BootCampCard";
+import StyledButton from "../StyledButton";
 
 const btns = [
   {
@@ -35,24 +36,38 @@ function Bootcamp({ slides }) {
     >
       <Typography
         variant="h3"
-        sx={{ fontSize: "40px", lineHeight: "60px", color: "#161E3C" }}
+        sx={{
+          fontSize: { xs: "28px", sm: "40px" },
+          lineHeight: { xs: "32px", sm: "60px" },
+          color: "#161E3C",
+        }}
       >
         Bootcamps
       </Typography>
       {/* activeBtn */}
       <Box sx={{ display: "flex", gap: "16px" }}>
         {btns.map((btn, idx) => (
-          <Button
-            variant="contained"
+          <StyledButton
+            btnClick={() => handleBtnClick(idx)}
             key={btn.id}
+            title={btn.title}
+            isIcon={false}
             sx={{
-              background: idx === activeBtn ? "#FB9B43" : "#FFD7B1",
-              color: "#161E3C",
+              "&": {
+                background: idx === activeBtn ? "#FB9B43" : "#FFD7B1",
+                fontSize: { xs: "10px", sm: "24px" },
+                p: "10px 20px",
+                width: "fit-content",
+                border: "#FB9B43",
+                color: "#161E3C",
+              },
+              "&:hover": {
+                backgroundColor: "#FB9B43eb",
+                borderColor: "#FB9B43eb",
+                boxShadow: "none",
+              },
             }}
-            onClick={() => handleBtnClick(idx)}
-          >
-            {btn.title}
-          </Button>
+          />
         ))}
       </Box>
       {activeBtn === 0 ? (

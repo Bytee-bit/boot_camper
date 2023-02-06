@@ -1,6 +1,7 @@
 import { Button, Grid, Typography } from "@mui/material";
 import React from "react";
 import { Carousel } from "./Carousel";
+import StyledButton from "./StyledButton";
 
 function BootCampCard({ slides }) {
   return (
@@ -52,9 +53,18 @@ function BootCampCard({ slides }) {
               ullamco cillum dolor. Voluptate exercitation incididunt aliquip
               deserunt reprehenderit elit laborum.{" "}
             </Typography>
-            <Button variant="contained" sx={{ width: "fit-content" }}>
+            {/* <Button variant="contained" sx={{ width: "fit-content" }}>
               Join Now
-            </Button>
+            </Button> */}
+            <StyledButton
+              title={"Join Now"}
+              isIcon={true}
+              sx={{
+                "&": {
+                  width: { xs: "100%", sm: "280px" },
+                },
+              }}
+            />
           </Grid>
           <Grid item xs={12} md={4.5}>
             <Carousel autoSlide={true} duration={300} indicator={false}>

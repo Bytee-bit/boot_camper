@@ -60,7 +60,12 @@ function StyledButton({ title, isIcon = false, sx, btnClick }) {
           position: "relative",
         }}
       >
-        <Typography>{title}</Typography>
+        <Typography
+          variant="subtitle2"
+          sx={{ fontSize: { xs: "10px", sm: "24px" } }}
+        >
+          {title}
+        </Typography>
         {isIcon && (
           <ArrowForwardIcon
             sx={{
